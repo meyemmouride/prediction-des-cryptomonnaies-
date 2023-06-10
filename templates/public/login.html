@@ -1,0 +1,76 @@
+{% extends "public/templates/base_public.html" %}
+{% block title %}CoinCorner - login{% endblock title %}
+{% block nav %}
+<header>
+    <h1>CoinCorner</h1>
+    <div class="nav-links">
+    <nav >
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        
+        <li><a href="">News</a></li>
+        <li><a href="">Contact Us</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  </header>
+{% endblock nav %}
+{% block content %}
+
+  <div class="container my-5 border"><form action="" method="POST">
+		{{ form.hidden_tag()}}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">CoinCorner - Login </legend>
+			<div class="form-group">
+				{{form.email.label(class='form-control-label')}}
+				{% if form.email.errors %}
+				{{form.email(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.email.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.email(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.password.label(class='form-control-label')}}
+				{% if form.password.errors %}
+				{{form.password(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.password.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.password(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>
+			<br>
+			<div class="form-group">
+				{{form.submit(class='btn btn-outline-info')}}
+			</div>
+			<div class="form-check">
+				{{form.remember(class='form-check-imput')}}
+				{{form.remember.label(class='form-check-imput')}}
+			</div>	 
+		</fieldset>
+	<small class="text-muted ml-2">
+        <a href="#">Forget Password</a>
+
+	  </small>
+	  <small class="text-muted">
+		Need an account?
+		<a href="/inscrire" class="ml-2">Sign Up here</a>
+	  </small>
+	  </form>
+	  
+	</div>
+
+{% endblock content %}
+	

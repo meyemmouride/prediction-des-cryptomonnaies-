@@ -1,0 +1,61 @@
+{% extends "public/templates/base_public.html" %}
+{% block title %}CoinCorner - Bitcoin regression lineaire{% endblock title %}
+{% block nav %}
+
+<header>
+  <h1>CoinCorner</h1>
+  <div class="nav-links">
+    <nav>
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+
+        <li><a href="">News</a></li>
+        <li><a href="">Contact Us</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+{% endblock nav %}
+{% block content %}
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/256px-Bitcoin.svg.png" alt="Bitcoin" height="100px" width="100px">
+      
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Bitcoin prediction price REGRESSION LINEAIRE</h1>
+    </div>
+  </div>
+</div>
+<br><br>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<div class="modifier">
+  <pre style="font-size: 20px; text-align:center">Voici les resultats de prediction </pre>
+     <p style="color:rgb(27, 240, 98);"><strong>{{current_date}}</strong></p>
+    <br><p><strong> le prix actuel est (prix reel): <span style="color:orangered;"> {{price_btc}} </span></strong></p>
+    <p><strong> le prix de bitcoin avec prediction (prix predit) : <span style="color:orangered;">{{prediction}}</span></strong></p>
+
+    <p><strong> le prix reel - le prix predit = <span style="color:orangered;"> {{difference}}</span></strong></p>
+
+</div>
+
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<footer>
+
+</footer>
+
+
+
+{% endblock content %}

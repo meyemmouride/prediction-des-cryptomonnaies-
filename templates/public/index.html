@@ -1,0 +1,73 @@
+{% extends "public/templates/base_public.html" %}
+
+{% block title %}CoinCorner - Home{% endblock title %}
+{% block nav %}
+<header>
+    <h1>CoinCorner</h1>
+    <div class="nav-links">
+    <nav >
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        
+        <li><a href="">News</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/inscrire">Sign up</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+{% endblock nav %}
+{% block content %}
+
+  <main>
+    <h2><br><br>Welcome to CoinCorner</h2>
+    <p>Join the crypto revolution and own your financial destiny</p>
+  </main>
+<br>
+<table>
+  <thead>
+    <tr>
+      
+      <th>Logo</th>
+      <th>Name</th>
+      <th>Current Price</th>
+      <th>PredictionRL</th>
+      <th>PredictionRN</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/256px-Bitcoin.svg.png" alt="Bitcoin"></td>
+      <td>Bitcoin</td>
+      <td>{{price_btc}}</td>
+      <td><a class="button" href="/bitcoinREGLIN">start</a></td>
+      <td><a class="button" href="/bitcoinRF">start</a></td>
+      
+      
+    </tr>
+    <tr>
+      
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/256px-Ethereum-icon-purple.svg.png" alt="Ethereum"></td>
+      <td>Ethereum</td>
+      <td>{{price_eth}}</td>
+      <td><a class="button" href="/predir/eth">start</a></td>
+      <td><a class="button" href="/ETHRF">start</a></td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+<br><br><br><br><br>
+
+
+
+<footer>
+  
+</footer>
+
+{% endblock content %}

@@ -1,0 +1,136 @@
+{% extends "public/templates/base_public.html" %}
+{% block title %}CoinCorner - iscrire{% endblock title %}
+{% block nav %}
+<header>
+    <h1>CoinCorner</h1>
+    <div class="nav-links">
+    <nav >
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        
+        <li><a href="">News</a></li>
+        <li><a href="">Contact Us</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  </header>
+{% endblock nav %}
+{% block content %}
+
+  <div class="container mt-auto align-items-center"><form action="" method="POST">
+		{{ form.hidden_tag()}}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">CoinCorner - Sign up</legend>
+			<div class="form-group">
+				{{form.fname.label(class='form-control-label')}}
+				{% if form.fname.errors %}
+				{{form.fname(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.fname.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.fname(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.lname.label(class='form-control-label')}}
+				{% if form.lname.errors %}
+				{{form.lname(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.lname.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.lname(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.username.label(class='form-control-label')}}
+				{% if form.username.errors %}
+				{{form.username(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.username.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.username(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.email.label(class='form-control-label')}}
+				{% if form.email.errors %}
+				{{form.email(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.email.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.email(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.password.label(class='form-control-label')}}
+				{% if form.password.errors %}
+				{{form.password(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.password.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.password(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div>	
+			<div class="form-group">
+				{{form.confirm_password.label(class='form-control-label')}}
+				{% if form.confirm_password.errors %}
+				{{form.confirm_password(class='form-control form-control-lg is-invalid')}}
+				<div class="invalid-feedback">
+					{% for error in form.confirm_password.errors%}
+					<span>{{error}}</span>
+					{% endfor %}
+				</div>
+				{% else %}
+				{{form.confirm_password(class='form-control form-control-lg')}}
+				{% endif %}
+				
+			</div><br>
+			<div class="form-group">
+				{{form.submit(class='btn btn-outline-info')}}
+			</div>	 
+		</fieldset>
+	 <div class="border-top pt-3">
+		<small class="text-muted">
+			Alreadt have an account
+			<a href="/login" class="ml-2">login</a>
+		</small>
+	   </div>
+	  </form>
+	   
+	</div>
+
+{% endblock content %}
+	
+	
+	
+ 
+ 
+ 
+ 
+ 
+
+
+
+
